@@ -5,6 +5,7 @@ class CreateMedications < ActiveRecord::Migration
       t.string :dose
       t.string :refill_date
       t.string :notes
+      t.integer :user_id
     end
   end
 end
