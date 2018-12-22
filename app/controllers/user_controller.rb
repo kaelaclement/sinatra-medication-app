@@ -3,7 +3,7 @@ class UserController < ApplicationController
     erb :'/users/signup'
   end
 
-  post '/users' do
+  post '/signup' do
     user = User.new(params)
     if !User.find_by(username: params[:username]) && user.save
       redirect '/medications/index'
