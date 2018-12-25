@@ -1,3 +1,6 @@
 <% @user.medications.each do |medication| %>
-  <p><%= medication.name %></p>
+  <h1><a href="/medications/<%= medication.id %>"><%= medication.name %></a></h1>
+  <p>Dose: <%= medication.dose %></p>
+  <p>Refill Date: <%= medication.refill_date %></p>
+  <p>Notes: <%= medication.notes %></p>
 <% end %>
