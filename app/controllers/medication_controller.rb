@@ -8,4 +8,12 @@ class MedicationController < ApplicationController
       redirect '/login'
     end
   end
+
+  get '/medications/new' do
+    if logged_in?
+      erb :'/medications/new'
+    else
+      redirect '/login'
+    end
+  end
 end
