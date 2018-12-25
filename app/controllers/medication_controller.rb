@@ -16,4 +16,14 @@ class MedicationController < ApplicationController
       redirect '/login'
     end
   end
+
+  post '/medications' do
+    if !params[:name].empty? && !params[:dose].empty? && !params[:refill_date].empty? && !params[:notes].empty?
+      med = current_user.medications.create(params)
+
+      redirect "/medications/#{med.id}"
+    else
+      redirect '/medications/new'
+    end
+  end
 end
