@@ -1,0 +1,10 @@
+<h1><%=@medication.name%></h1>
+<p>Dose: <%= @medication.dose %></p>
+<p>Refill Date: <%= @medication.refill_date %></p>
+<p>Notes: <%= @medication.notes %></p>
+<form action="/medications/<%= @medication.id %>/edit">
+  <button type="submit">Edit Medication</button>
+</form>
+<form action="/medications/<%= @medication.id %>/delete">
+  <button type="submit">Delete Medication</button>
+</form>
