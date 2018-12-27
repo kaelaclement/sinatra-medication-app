@@ -45,4 +45,17 @@ class MedicationController < ApplicationController
     end
   end
 
+  patch '/medications/:id' do
+    if logged_in? && Medication.find(params[:id]).user == current_user
+      med = Medication.find(params[:id])
+      if params[:medication][:name].empty? || params[:medication][:dose].empty? || params[:medication][:refill_date].empty? || params[:medication][:notes].empty?
+        redirect "/medications/#{med.id}/edit"
+      end
+      med.update(params[:medication])
+      redirect "/medications/#{med.id}"
+    else
+      redirect '/'
+    end
+  end
+
 end
