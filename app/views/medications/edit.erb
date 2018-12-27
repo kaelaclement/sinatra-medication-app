@@ -7,3 +7,7 @@
   <p>Notes: <input type="text" name="medication[notes]" value="<%= @medication.notes %>"></p>
   <p><input type="submit" value="Edit"></p>
 </form>
+<form method="POST" action="/medications/<%= @medication.id %>">
+  <input type="hidden" name="_method" value="delete">
+  <input type="submit" value="Delete Medication">
+</form>

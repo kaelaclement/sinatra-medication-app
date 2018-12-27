@@ -58,4 +58,12 @@ class MedicationController < ApplicationController
     end
   end
 
+  delete '/medications/:id' do
+    if logged_in? && Medication.find(params[:id]).user == current_user
+      Medication.find(params[:id]).delete
+      redirect '/medications/index'
+    else
+      redirect '/'
+    end
+  end
 end
