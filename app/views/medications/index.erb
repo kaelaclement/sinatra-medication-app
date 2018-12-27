@@ -1,9 +1,15 @@
+<h1>Welcome, <%= @user.username %>!</h1>
+<h2>Here are your medications:</h2>
+
+<ul>
 <% @user.medications.each do |medication| %>
-  <h1><a href="/medications/<%= medication.id %>"><%= medication.name %></a></h1>
-  <p>Dose: <%= medication.dose %></p>
-  <p>Refill Date: <%= medication.refill_date %></p>
-  <p>Notes: <%= medication.notes %></p>
+  <li><a href="/medications/<%= medication.id %>"><%= medication.name %></a></li>
 <% end %>
+</ul>
 <br><br>
-<h5><a href="/medications/new">Add a Medication</a></h5>
-<h5><a href="/logout">Log Out</a></h5>
+<form action="/medications/new">
+  <button type="submit">Add a Medication</button>
+</form>
+<form action="/logout">
+  <button type="submit">Log Out</button>
+</form>
