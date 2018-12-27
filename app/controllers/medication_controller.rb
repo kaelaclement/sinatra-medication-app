@@ -26,4 +26,14 @@ class MedicationController < ApplicationController
       redirect '/medications/new'
     end
   end
+
+  get '/medications/:id' do
+    if logged_in? && Medication.find(params[:id]).user == current_user
+      @medication = Medication.find(params[:id])
+      erb :'/medications/show'
+    else
+      redirect '/'
+    end
+  end
+
 end
