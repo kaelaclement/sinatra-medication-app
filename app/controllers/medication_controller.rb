@@ -5,7 +5,7 @@ class MedicationController < ApplicationController
       
       erb :'/medications/index'
     else
-      redirect '/login'
+      redirect '/'
     end
   end
 
@@ -13,7 +13,7 @@ class MedicationController < ApplicationController
     if logged_in?
       erb :'/medications/new'
     else
-      redirect '/login'
+      redirect '/'
     end
   end
 
