@@ -1,0 +1,9 @@
+<h1>Edit Medication</h1>
+<form method="POST" action="/medications/<%= @medication.id %>">
+  <input type="hidden" name="_method" value="patch">
+  <p>Name: <input type="text" name="name" value="<%= @medication.name %>"></p>
+  <p>Dose: <input type="text" name="dose" value="<%= @medication.dose %>"></p>
+  <p>Refill Date: <input type="text" name="refill_date" value="<%= @medication.refill_date %>"></p>
+  <p>Notes: <input type="text" name="notes" value="<%= @medication.notes %>"></p>
+  <p><input type="submit" value="Edit"></p>
+</form>
