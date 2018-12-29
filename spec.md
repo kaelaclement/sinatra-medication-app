@@ -12,7 +12,7 @@ Specs:
 - [x] Ensure that users can't modify content created by other users: all Medication view and modify routes check that medications belong to the current user
 - [x] Include user input validations: before creating or updating any medication, fields are checked for input, user is sent back to the form if any field is left empty
 - [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
-- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code
+- [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code: README has description, instructions for use and contribution, and link to LICENSE.md
 
 Confirm
 
