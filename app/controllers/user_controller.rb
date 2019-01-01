@@ -25,6 +25,7 @@ class UserController < ApplicationController
       session[:user_id] = user.id
       redirect '/medications/index'
     else
+      flash[:error] = "Please check your username and password and try again."
       redirect '/login'
     end
   end
