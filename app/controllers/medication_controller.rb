@@ -23,6 +23,7 @@ class MedicationController < ApplicationController
 
       redirect "/medications/#{med.id}"
     else
+      flash[:error] = "Please fill out all fields for your new medication."
       redirect '/medications/new'
     end
   end

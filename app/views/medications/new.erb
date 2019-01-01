@@ -1,5 +1,10 @@
 <h1>Add a Medication</h1>
 
+<% if flash[:error] %>
+  <%= flash[:error] %>
+  <br><br>
+<% end %>
+
 <form method="POST" action="/medications">
   <p>Name: <input type="text" name="name"></p>
   <p>Dose: <input type="text" name="dose"></p>
