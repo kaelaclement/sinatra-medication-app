@@ -11,7 +11,7 @@ Specs:
 - [x] Ensure that the belongs_to resource has routes for Creating, Reading, Updating and Destroying: Medication routes include /new, /index, /show, /edit, and /delete
 - [x] Ensure that users can't modify content created by other users: all Medication view and modify routes check that medications belong to the current user
 - [x] Include user input validations: before creating or updating any medication, fields are checked for input, user is sent back to the form if any field is left empty
-- [ ] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new)
+- [x] BONUS - not required - Display validation failures to user with error message (example form URL e.g. /posts/new): displays errors for invalid signup, login, and medication information.
 - [x] Your README.md includes a short description, install instructions, a contributors guide and a link to the license for your code: README has description, instructions for use and contribution, and link to LICENSE.md
 
 Confirm
