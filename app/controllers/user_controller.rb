@@ -9,6 +9,7 @@ class UserController < ApplicationController
       session[:user_id] = user.id
       redirect '/medications/index'
     else
+      flash[:error] = "Please use a valid username and password."
       redirect '/signup'
     end
   end
