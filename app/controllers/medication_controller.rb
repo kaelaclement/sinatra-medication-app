@@ -50,6 +50,7 @@ class MedicationController < ApplicationController
     if logged_in? && Medication.find(params[:id]).user == current_user
       med = Medication.find(params[:id])
       if params[:medication][:name].empty? || params[:medication][:dose].empty? || params[:medication][:refill_date].empty? || params[:medication][:notes].empty?
+        flash[:error] = "Please fill out all fields to edit your medication."
         redirect "/medications/#{med.id}/edit"
       end
       med.update(params[:medication])

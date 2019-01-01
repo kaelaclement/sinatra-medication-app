@@ -1,4 +1,10 @@
 <h1>Edit Medication</h1>
+
+<% if flash[:error] %>
+  <%= flash[:error] %>
+  <br><br>
+<% end %>
+
 <form method="POST" action="/medications/<%= @medication.id %>">
   <input type="hidden" name="_method" value="patch">
   <p>Name: <input type="text" name="medication[name]" value="<%= @medication.name %>"></p>
